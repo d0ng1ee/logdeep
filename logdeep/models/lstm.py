@@ -47,7 +47,7 @@ class Model_attention(nn.Module):
 
         return attn_output
 
-    def forward(self, input0, input1):
+    def forward(self, input0, input1, device):
         h0_0 = torch.zeros(self.num_layers, input0.size(0), self.hidden_size).to(device)
         c0_0 = torch.zeros(self.num_layers, input0.size(0), self.hidden_size).to(device)
 
