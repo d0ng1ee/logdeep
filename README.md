@@ -4,7 +4,7 @@
 
 LogDeep is an open source deeplearning-based log analysis toolkit for automated anomaly detection.
 
-![Framework of Anomaly Detection](data/semantic_vec.pdf)
+![Framework of Anomaly Detection](/data/semantic_vec.pdf)
 
 ## Major features
 
@@ -24,7 +24,7 @@ LogDeep is an open source deeplearning-based log analysis toolkit for automated 
 
 ## Benchmark results
 
-|       |            | HDFS |     |
+|       |            | HDFS |     | |
 | :----:|:----:|:----:|:----:|:----:|
 | **Model** | **feature** | **Precision** | **Recall** | **F1** |
 | deeplog(unsupervised)| seq |0.953 | 0.948 | 0.95 |
