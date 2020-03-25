@@ -36,7 +36,7 @@ python deeplog.py train
 python deeplog.py test
 ```
 
-The obtained model parameters and train logs will be saved under `result/` path
+The output results, key parameters and train logs will be saved under `result/` path
 
 ## DIY your own pipeline
 
