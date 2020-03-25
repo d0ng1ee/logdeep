@@ -47,7 +47,7 @@ options['model_name'] = "robustlog"
 options['save_dir'] = "../result/robustlog/"
 
 # Predict
-options['model_path'] = "../result/robustlog/robustlog_epoch39.pth"
+options['model_path'] = "../result/robustlog/robustlog_last.pth"
 options['num_candidates'] = -1
 
 seed_everything(seed=1234)

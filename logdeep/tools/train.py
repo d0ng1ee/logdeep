@@ -193,8 +193,6 @@ class Trainer():
             if epoch in self.lr_step:
                 self.optimizer.param_groups[0]['lr'] *= self.lr_decay_ratio
             self.train(epoch)
-            # if epoch<200 and epoch % 10 == 0:
-            #     self.valid(epoch)
             # if epoch>=200 and epoch % 3 == 2:
             if epoch>20:
                 # self.valid(epoch)

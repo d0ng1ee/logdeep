@@ -4,6 +4,21 @@ import pandas as pd
 import numpy as np
 import json
 
+
+def read_json(filename):
+    with open(filename, 'r') as load_f:
+        file_dict = json.load(load_f)
+    return file_dict
+
+
+def trp(l, n):
+    """ Truncate or pad a list """
+    r = l[:n]
+    if len(r) < n:
+        r.extend(list([0]) * (n - len(r)))
+    return r
+
+
 def down_sample(logs, labels, sample_ratio):
     print('sampling...')
     total_num = len(labels)
@@ -23,21 +38,6 @@ def down_sample(logs, labels, sample_ratio):
     return sample_logs, sample_labels
 
 
-# def up_sample(logs, labels, sample_ratio=5)
-
-
-def read_json(filename):
-    with open(filename, 'r') as load_f:
-        file_dict = json.load(load_f)
-    return file_dict
-
-def trp(l, n):
-    """ Truncate or pad a list """
-    r = l[:n]
-    if len(r) < n:
-        r.extend(list([0]) * (n - len(r)))
-    return r
-
 def fix_window(data_dir,datatype,window_size,sample_ratio=1):
     '''
     dataset structure
@@ -47,7 +47,6 @@ def fix_window(data_dir,datatype,window_size,sample_ratio=1):
             ...
         labels(list)
     '''
-
     num_sessions = 0
     result_logs = {}
     result_logs['Sequentials'] = []
@@ -83,6 +82,7 @@ def fix_window(data_dir,datatype,window_size,sample_ratio=1):
     print('File {}, number of seqs {}'.format(data_dir, len(result_logs['Sequentials'])))
 
     return result_logs, labels
+
 
 def session_window(data_dir,datatype,sample_ratio=1):
     event2semantic_vec = read_json(data_dir+'hdfs/event2semantic_vec.json')

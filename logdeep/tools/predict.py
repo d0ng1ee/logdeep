@@ -9,6 +9,7 @@ import os
 import gc
 from torch.utils.data import DataLoader
 import torch.nn as nn
+import torch.nn.functional as F
 from logdeep.dataset.log import log_dataset
 from logdeep.dataset.sample import session_window
 import time
@@ -119,7 +120,9 @@ class Predicter():
             for value in log.values():
                 features.append(value.clone().to(self.device))
             output = self.model(features=features, device = self.device)
-            predicted = torch.argmax(output, dim=1).cpu().numpy()
+            output = F.sigmoid(output)[:,0].cpu().detach().numpy()
+            # predicted = torch.argmax(output, dim=1).cpu().numpy()
+            predicted = (output<0.2).astype(int)
             label = np.array([y.cpu() for y in label])
             TP += ((predicted==1)*(label==1)).sum()
             FP += ((predicted==1)*(label==0)).sum()
