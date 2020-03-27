@@ -19,7 +19,7 @@ options['window_size'] = 10
 options['device'] = "cpu"
 
 # Smaple
-options['sample'] = "fix_window"
+options['sample'] = "sliding_window"
 options['window_size'] = 10  # if fix_window
 
 # Features

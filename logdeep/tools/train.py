@@ -14,7 +14,7 @@ from torch.utils.data import DataLoader
 from tqdm import tqdm
 
 from logdeep.dataset.log import log_dataset
-from logdeep.dataset.sample import fix_window, session_window
+from logdeep.dataset.sample import sliding_window, session_window
 from logdeep.tools.utils import (save_parameters, seed_everything,
                                  train_val_split)
 
@@ -40,11 +40,11 @@ class Trainer():
         self.feature_num = options['feature_num']
 
         os.makedirs(self.save_dir, exist_ok=True)
-        if self.sample == 'fix_window':
-            train_logs, train_labels = fix_window(self.data_dir,
+        if self.sample == 'sliding_window':
+            train_logs, train_labels = sliding_window(self.data_dir,
                                                   datatype='train',
                                                   window_size=self.window_size)
-            val_logs, val_labels = fix_window(self.data_dir,
+            val_logs, val_labels = sliding_window(self.data_dir,
                                               datatype='val',
                                               window_size=self.window_size,
                                               sample_ratio=0.001)

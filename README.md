@@ -45,7 +45,7 @@ Try to modify these parameters to build a new model!
 
 ```
 # Smaple
-options['sample'] = "fix_window"
+options['sample'] = "sliding_window"
 options['window_size'] = 10
 
 # Features

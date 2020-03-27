@@ -39,7 +39,7 @@ def down_sample(logs, labels, sample_ratio):
     return sample_logs, sample_labels
 
 
-def fix_window(data_dir, datatype, window_size, sample_ratio=1):
+def sliding_window(data_dir, datatype, window_size, sample_ratio=1):
     '''
     dataset structure
         result_logs(dict):
