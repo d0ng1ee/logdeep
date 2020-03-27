@@ -22,7 +22,7 @@ LogDeep is an open source deeplearning-based log analysis toolkit for automated 
 ## Quick start
 
 ```
-git clone xxx.git
+git clone https://github.com/donglee-afar/logdeep.git
 cd logdeep
 ```
 
