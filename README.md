@@ -14,6 +14,14 @@ LogDeep is an open source deeplearning-based log analysis toolkit for automated 
 
 - State of the art(Including resluts from deeplog,loganomaly,robustlog...)
 
+## Models
+
+| Model | Paper reference |
+| :--- | :--- |
+|DeepLog| [**CCS'17**] [DeepLog: Anomaly Detection and Diagnosis from System Logs through Deep Learning](https://www.cs.utah.edu/~lifeifei/papers/deeplog.pdf)|
+|LogAnomaly| [**IJCAI'19**] [LogAnomaly: UnsupervisedDetectionof SequentialandQuantitativeAnomaliesinUnstructuredLogs](https://www.ijcai.org/Proceedings/2019/658)|
+|RobustLog| [**FSE'19**] [RobustLog-BasedAnomalyDetectiononUnstableLogData](https://dl.acm.org/doi/10.1145/3338906.3338931)
+
 ## Requirement
 
 - python>=3.6
@@ -58,15 +66,6 @@ Model = loganomaly(input_size=options['input_size'],
                     num_layers=options['num_layers'],
                     num_keys=options['num_classes'])
 ```
-
-
-## Models
-
-| Model | Paper reference |
-| :--- | :--- |
-|DeepLog| [**CCS'17**] [DeepLog: Anomaly Detection and Diagnosis from System Logs through Deep Learning](https://www.cs.utah.edu/~lifeifei/papers/deeplog.pdf)|
-|LogAnomaly| [**IJCAI'19**] [LogAnomaly: UnsupervisedDetectionof SequentialandQuantitativeAnomaliesinUnstructuredLogs](https://www.ijcai.org/Proceedings/2019/658)|
-|RobustLog| [**FSE'19**] [RobustLog-BasedAnomalyDetectiononUnstableLogData](https://dl.acm.org/doi/10.1145/3338906.3338931)
 
 ## Benchmark results
 
