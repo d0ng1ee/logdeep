@@ -6,6 +6,8 @@ LogDeep is an open source deeplearning-based log analysis toolkit for automated 
 
 ![Framework of logdeep](data/semantic_vec.png)
 
+*Note: This repo does not include log parsing，if you need to use it, please check [logparser](https://github.com/logpai/logparser)*
+
 ## Major features
 
 - Modular Design
