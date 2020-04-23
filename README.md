@@ -36,6 +36,9 @@ git clone https://github.com/donglee-afar/logdeep.git
 cd logdeep
 ```
 
+Example of building your own log dataset  
+[SAMPLING_EXAMPLE.md](data/sampling_example/SAMPLING_EXAMPLE.md)
+
 Train & Test DeepLog example
 
 ```
